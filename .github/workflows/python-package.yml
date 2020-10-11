@@ -25,5 +25,5 @@ jobs:
         pip install .[testing]
     - name: Test with pytest
       run: |
-        coverage run --source ./awstools -m pytest --verbose 
+        coverage run --source ./praudio -m pytest --verbose
         coverage report -m
