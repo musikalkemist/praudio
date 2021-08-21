@@ -1,2 +1,2 @@
 # praudio
-Audio preprocessing framework for Deep Learning audio applications
+Audio preprocessing framework for Machine Learning applications.

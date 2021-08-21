@@ -1,6 +1,7 @@
 import setuptools
 from importlib.machinery import SourceFileLoader
 
+
 version = SourceFileLoader("praudio.version",
                            "praudio/version.py").load_module()
 
@@ -12,8 +13,7 @@ setuptools.setup(
     version=version.__version__,
     author="Valerio Velardo",
     author_email="velardovalerio@gmail.com",
-    description="Audio preprocessing framework for Deep Learning audio "
-                "applications",
+    description="Audio preprocessing framework for ML applications",
     url="https://github.com/musikalkemist/praudio",
     packages=setuptools.find_packages(),
     classifiers=[

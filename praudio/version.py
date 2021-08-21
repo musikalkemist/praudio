@@ -1,1 +1,3 @@
-__version__ = "0.0.3"
+"""This module contains the current version of the package."""
+
+__version__ = "0.0.4"
