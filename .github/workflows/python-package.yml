@@ -19,10 +19,11 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: ${{ matrix.python-version }}
-    - name: Install package
+    - name: Install package and dependencies
       run: |
         python -m pip install --upgrade pip
         pip install .[testing]
+        sudo apt-get install libsndfile1
     - name: Test with pytest
       run: |
         coverage run --source ./praudio -m pytest --verbose

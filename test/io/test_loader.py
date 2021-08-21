@@ -18,7 +18,7 @@ def loader():
 
 def test_loader_instance_is_instantiated_correctly(loader):
     assert isinstance(loader, Loader)
-    assert loader.mono == True
+    assert loader.mono is True
     assert loader.sample_rate == 44100
     assert loader.data_type == np.float32
 
