@@ -7,7 +7,7 @@ import numpy as np
 import numpy.typing as npt
 
 from praudio.io.signal import Signal
-from praudio.utils import extract_extension
+from praudio.utils import extract_extension_from_file
 from praudio.errors import FileExtensionError
 
 
@@ -59,6 +59,6 @@ class Loader:
         return signal
 
     def _raise_file_extension_error_if_file_extension_isnt_allowed(self, file):
-        extension = extract_extension(file)
+        extension = extract_extension_from_file(file)
         if extension not in self._audio_file_extensions:
             raise FileExtensionError(f"'{extension}' extension can't be loaded.")

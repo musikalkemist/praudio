@@ -1,6 +1,11 @@
 # CHANGELOG
 This file provides a history of the changes in the repo.
 
+# [0.0.5] - 21.08.21 - Valerio Velardo
+- Implemented NumpySaver object
+- Implemented abstract interface for transforms
+- Implemented unittests for NumpySaver
+
 # [0.0.4] - 21.08.21 - Valerio Velardo
 - Implemented Loader object
 - Implemented Signal object
