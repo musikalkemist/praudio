@@ -1,0 +1,2 @@
+[DESIGN]
+disable=missing-function-docstring,too-few-public-methods

@@ -30,7 +30,9 @@ setuptools.setup(
         "testing": [
             "pytest",
             "coverage",
-            "pytest-mock"
+            "pytest-mock",
+            "pylint",
+            "mypy"
         ]
     }
 )
