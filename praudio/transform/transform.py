@@ -26,4 +26,3 @@ class Transform(ABC):
 
         :return: New signal object with transformed values
         """
-        pass
