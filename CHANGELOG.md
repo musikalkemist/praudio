@@ -1,6 +1,10 @@
 # CHANGELOG
 This file provides a history of the changes in the repo.
 
+# [0.0.6] - 23.08.21 - Valerio Velardo
+- Implemented Short-Time Fourier Transform object
+- Implemented STFT unittests
+
 # [0.0.5] - 21.08.21 - Valerio Velardo
 - Implemented NumpySaver object
 - Implemented abstract interface for transforms

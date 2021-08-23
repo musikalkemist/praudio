@@ -19,6 +19,7 @@ class NumpySaver:
     """
     def __init__(self):
         self._extension = "npy"
+        logger.info("Initialised NumpySaver object")
 
     def save(self,
              file: str,
