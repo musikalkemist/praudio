@@ -1,6 +1,13 @@
 # CHANGELOG
 This file provides a history of the changes in the repo.
 
+# [0.0.7] - 23.08.21 - Valerio Velardo
+- Implemented MagnitudeSpectrogram
+- Implemented PowerSpectrogram
+- Implemented MelSpectrogram
+- Implemented MFCCSpectrogram
+- Implemented unittests
+
 # [0.0.6] - 23.08.21 - Valerio Velardo
 - Implemented Short-Time Fourier Transform object
 - Implemented STFT unittests

@@ -3,10 +3,15 @@ This module features a class that extracts Short-Time Fourier Transform
 from signals.
 """
 
+import logging
+
 import librosa
 
 from praudio.transform.transform import Transform
 from praudio.io.signal import Signal
+
+
+logger = logging.getLogger(__name__)
 
 
 class STFT(Transform):
@@ -34,14 +39,15 @@ class STFT(Transform):
         self.hop_length = hop_length
         self.win_length = win_length
         self.window = window
+        logger.info("Instantiated STFT object")
 
     def process(self, signal: Signal) -> Signal:
-        """Extract complex STFT from waveform and modifies signal.
+        """Extract complex STFT from waveform and modify signal.
 
         :param signal: Signal object. Note: this transform works only with
             waveform data
 
-        :return: signa: Modified signal
+        :return: Modified signal
         """
         stft = librosa.stft(signal.data,
                             n_fft=self.frame_length,
@@ -50,4 +56,6 @@ class STFT(Transform):
                             window=self.window)
         signal.data = stft
         signal.name = self.name
+        logger.info("Extracted Short-Time Fourier Transform for %s",
+                     signal.file)
         return signal

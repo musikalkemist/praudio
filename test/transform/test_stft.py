@@ -1,12 +1,8 @@
-from pathlib import Path
-
 import numpy as np
 import pytest
 
 from praudio.transform.stft import STFT
 from utils import sample_signal
-
-DUMMY_AUDIO_FILE = Path(Path(__file__).parent.parent, "dummy").with_suffix(".wav")
 
 
 @pytest.fixture

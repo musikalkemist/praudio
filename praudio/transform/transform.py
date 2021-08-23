@@ -1,12 +1,8 @@
 """This module provides an abstract interface for all transforms."""
 
-import logging
 from abc import ABC, abstractmethod
 
 from praudio.io.signal import Signal
-
-
-logger = logging.getLogger(__name__)
 
 
 class Transform(ABC):
@@ -20,7 +16,6 @@ class Transform(ABC):
 
     def __init__(self, name: str):
         self.name = name
-        logging.info("Instantiated %s transform object", self.name)
 
     @abstractmethod
     def process(self, signal: Signal) -> Signal:
