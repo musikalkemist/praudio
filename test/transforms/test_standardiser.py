@@ -1,7 +1,7 @@
 import numpy as np
 import pytest
 
-from praudio.transform.scaling.standardiser import Standardiser
+from praudio.transforms.scaling.standardiser import Standardiser
 from utils import sample_signal
 
 

@@ -1,7 +1,7 @@
 import numpy as np
 import pytest
 
-from praudio.transform.magnitudespectrogram import MagnitudeSpectrogram
+from praudio.transforms.magnitudespectrogram import MagnitudeSpectrogram
 from utils import sample_signal
 
 

@@ -6,12 +6,12 @@ from praudio.io.signal import Signal
 
 
 class Transform(ABC):
-    """Transform is a common interface for all transform objects. Such
+    """Transform is a common interface for all transforms objects. Such
     objects manipulate a signal (e.g., applying log scaling, extracting
     MFCCs).
 
     Attrs:
-        - name: The name of the transform
+        - name: The name of the transforms
     """
 
     def __init__(self, name: str):
@@ -19,7 +19,7 @@ class Transform(ABC):
 
     @abstractmethod
     def process(self, signal: Signal) -> Signal:
-        """This method is responsible to apply a transform to the incoming
+        """This method is responsible to apply a transforms to the incoming
         signal.
 
         :param signal: Signal object to be manipulated

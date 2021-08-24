@@ -7,7 +7,7 @@ import logging
 
 import librosa
 
-from praudio.transform.transform import Transform
+from praudio.transforms.transform import Transform
 from praudio.io.signal import Signal
 
 
@@ -15,7 +15,7 @@ logger = logging.getLogger(__name__)
 
 
 class STFT(Transform):
-    """This class extracts a Short-Time Fourier transform from a signal.
+    """This class extracts a Short-Time Fourier transforms from a signal.
     It's a concrete Transform. librosa facilities are used to extract STFT.
 
     Attributes:
@@ -44,7 +44,7 @@ class STFT(Transform):
     def process(self, signal: Signal) -> Signal:
         """Extract complex STFT from waveform and modify signal.
 
-        :param signal: Signal object. Note: this transform works only with
+        :param signal: Signal object. Note: this transforms works only with
             waveform data
 
         :return: Modified signal

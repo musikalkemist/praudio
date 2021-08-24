@@ -2,7 +2,7 @@
 
 import numpy as np
 
-from praudio.transform.scaling.scaler import Scaler
+from praudio.transforms.scaling.scaler import Scaler
 from praudio.errors import NotA2DSignalError
 
 

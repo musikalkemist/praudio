@@ -1,7 +1,7 @@
 import numpy as np
 import pytest
 
-from praudio.transform.mfcc import MFCC
+from praudio.transforms.mfcc import MFCC
 from utils import sample_signal
 
 

@@ -1,7 +1,7 @@
 import numpy as np
 import pytest
 
-from praudio.transform.stft import STFT
+from praudio.transforms.stft import STFT
 from utils import sample_signal
 
 

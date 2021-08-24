@@ -1,7 +1,7 @@
 import numpy as np
 import pytest
 
-from praudio.transform.log import Log
+from praudio.transforms.log import Log
 from utils import sample_signal
 from utils import sample_2d_signal
 

@@ -1,7 +1,7 @@
 import numpy as np
 import pytest
 
-from praudio.transform.melspectrogram import MelSpectrogram
+from praudio.transforms.melspectrogram import MelSpectrogram
 from utils import sample_signal
 
 

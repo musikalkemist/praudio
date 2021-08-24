@@ -1,6 +1,10 @@
 # CHANGELOG
 This file provides a history of the changes in the repo.
 
+# [0.0.10] - 24.08.21 - Valerio Velardo
+- Implemented batch transformations in TransformsChain
+- Implemented unittests for TransformsChain
+
 # [0.0.9] - 24.08.21 - Valerio Velardo
 - Implemented Log transform with unittests
 

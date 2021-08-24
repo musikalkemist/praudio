@@ -1,7 +1,7 @@
 import numpy as np
 import pytest
 
-from praudio.transform.scaling.rowstandardiser import RowStandardiser
+from praudio.transforms.scaling.rowstandardiser import RowStandardiser
 from praudio.errors import NotA2DSignalError
 from utils import sample_2d_signal
 

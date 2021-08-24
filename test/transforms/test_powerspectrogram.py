@@ -1,7 +1,7 @@
 import numpy as np
 import pytest
 
-from praudio.transform.powerspectrogram import PowerSpectrogram
+from praudio.transforms.powerspectrogram import PowerSpectrogram
 from utils import sample_signal
 
 

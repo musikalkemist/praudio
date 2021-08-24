@@ -4,7 +4,7 @@ import logging
 
 import librosa
 
-from praudio.transform.transform import Transform
+from praudio.transforms.transform import Transform
 from praudio.io.signal import Signal
 
 

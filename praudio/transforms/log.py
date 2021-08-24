@@ -7,7 +7,7 @@ import logging
 
 import numpy as np
 
-from praudio.transform.transform import Transform
+from praudio.transforms.transform import Transform
 from praudio.io.signal import Signal
 
 

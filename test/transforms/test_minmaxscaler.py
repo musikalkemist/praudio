@@ -1,7 +1,7 @@
 import numpy as np
 import pytest
 
-from praudio.transform.scaling.minmaxscaler import MinMaxScaler
+from praudio.transforms.scaling.minmaxscaler import MinMaxScaler
 from utils import sample_signal
 
 

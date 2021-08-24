@@ -7,7 +7,7 @@ import logging
 
 import numpy as np
 
-from praudio.transform.stft import STFT
+from praudio.transforms.stft import STFT
 from praudio.io.signal import Signal
 
 
@@ -42,7 +42,7 @@ class PowerSpectrogram(STFT):
     def process(self, signal: Signal) -> Signal:
         """Extract power spectrogram from waveform and modify signal.
 
-        :param signal: Signal object. Note: this transform works only with
+        :param signal: Signal object. Note: this transforms works only with
             waveform data
 
         :return: Modified signal
