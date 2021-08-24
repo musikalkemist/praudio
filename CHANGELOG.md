@@ -1,6 +1,9 @@
 # CHANGELOG
 This file provides a history of the changes in the repo.
 
+# [0.0.9] - 24.08.21 - Valerio Velardo
+- Implemented Log transform with unittests
+
 # [0.0.8] - 24.08.21 - Valerio Velardo
 - Implemented scaling transforms (Scaler base class, MinMaxScaler,
 Standardiser, RowStandardiser)

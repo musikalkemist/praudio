@@ -11,7 +11,7 @@ class Standardiser(Scaler):
     is zero and the resultant distribution has a unit standard deviation.
 
     If the signal is 2-dimensional (e.g., spectrogram), the mean / std
-    deviation are calculated across all rows.
+    deviation are calculated gloabally across all rows.
     """
 
     def __init__(self):

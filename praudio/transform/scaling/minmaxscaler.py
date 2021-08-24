@@ -13,6 +13,9 @@ class MinMaxScaler(Scaler):
     Attributes:
         - min_val: Lowest scaling range
         - max_val: Highest scaling range
+
+    If the signal is 2-dimensional (e.g., spectrogram), the mean / std
+    deviation are calculated gloabally across all rows.
     """
 
     def __init__(self, min: float = 0., max: float = 1.):
