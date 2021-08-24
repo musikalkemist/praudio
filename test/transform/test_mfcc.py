@@ -10,7 +10,7 @@ def mfcc():
     return MFCC(14, 100, 50, 75, "hann")
 
 
-def test_loader_instance_is_instantiated_correctly(mfcc):
+def test_mfcc_instance_is_instantiated_correctly(mfcc):
     assert isinstance(mfcc, MFCC)
     assert mfcc.num_mfcc == 14
     assert mfcc.frame_length == 100

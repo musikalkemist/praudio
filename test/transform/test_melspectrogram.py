@@ -10,7 +10,7 @@ def mel_spectrogram():
     return MelSpectrogram(32, 10, 10000, 100, 50, 75, "hann")
 
 
-def test_loader_instance_is_instantiated_correctly(mel_spectrogram):
+def test_mel_spectrogram_instance_is_instantiated_correctly(mel_spectrogram):
     assert isinstance(mel_spectrogram, MelSpectrogram)
     assert mel_spectrogram.num_mels == 32
     assert mel_spectrogram.min_freq == 10

@@ -57,4 +57,3 @@ class MFCC(Transform):
         logger.info("Extracted MFCCs for %s",
                      signal.file)
         return signal
-

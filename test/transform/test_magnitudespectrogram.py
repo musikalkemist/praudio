@@ -10,7 +10,8 @@ def magnitude_spectrogram():
     return MagnitudeSpectrogram(100, 50, 75, "hann")
 
 
-def test_loader_instance_is_instantiated_correctly(magnitude_spectrogram):
+def test_magnitude_spectrogram_instance_is_instantiated_correctly(
+        magnitude_spectrogram):
     assert isinstance(magnitude_spectrogram, MagnitudeSpectrogram)
     assert magnitude_spectrogram.frame_length == 100
     assert magnitude_spectrogram.hop_length == 50

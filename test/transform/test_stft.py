@@ -10,7 +10,7 @@ def stft():
     return STFT(100, 50, 75, "hann")
 
 
-def test_loader_instance_is_instantiated_correctly(stft):
+def test_stft_instance_is_instantiated_correctly(stft):
     assert isinstance(stft, STFT)
     assert stft.frame_length == 100
     assert stft.hop_length == 50

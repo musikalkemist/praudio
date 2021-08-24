@@ -10,7 +10,8 @@ def power_spectrogram():
     return PowerSpectrogram(100, 50, 75, "hann", 2)
 
 
-def test_loader_instance_is_instantiated_correctly(power_spectrogram):
+def test_power_spectrogram_instance_is_instantiated_correctly(
+        power_spectrogram):
     assert isinstance(power_spectrogram, PowerSpectrogram)
     assert power_spectrogram.frame_length == 100
     assert power_spectrogram.hop_length == 50

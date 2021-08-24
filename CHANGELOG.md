@@ -1,6 +1,12 @@
 # CHANGELOG
 This file provides a history of the changes in the repo.
 
+# [0.0.8] - 24.08.21 - Valerio Velardo
+- Implemented scaling transforms (Scaler base class, MinMaxScaler,
+Standardiser, RowStandardiser)
+- Added NotA2DSignalError
+- Implemented unittests
+
 # [0.0.7] - 23.08.21 - Valerio Velardo
 - Implemented MagnitudeSpectrogram
 - Implemented PowerSpectrogram
