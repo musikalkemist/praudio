@@ -2,6 +2,7 @@ import numpy as np
 import pytest
 
 from praudio.transforms.scaling.standardiser import Standardiser
+from praudio.transforms.transform import TransformType
 from utils import sample_signal
 
 
@@ -12,6 +13,7 @@ def standardiser():
 
 def test_loader_instance_is_instantiated_correctly(standardiser):
     assert isinstance(standardiser, Standardiser)
+    assert standardiser.name == TransformType.STANDARDISER
 
 
 def test_signal_is_scaled(standardiser, sample_signal):

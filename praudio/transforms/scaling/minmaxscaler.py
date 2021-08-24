@@ -3,6 +3,7 @@
 import numpy as np
 
 from praudio.transforms.scaling.scaler import Scaler
+from praudio.transforms.transform import TransformType
 
 
 class MinMaxScaler(Scaler):
@@ -19,7 +20,7 @@ class MinMaxScaler(Scaler):
     """
 
     def __init__(self, min: float = 0., max: float = 1.):
-        super().__init__("minmaxscaler")
+        super().__init__(TransformType.MINMAXSCALER)
         self.min_val = min
         self.max_val = max
 

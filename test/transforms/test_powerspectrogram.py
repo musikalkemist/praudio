@@ -2,6 +2,7 @@ import numpy as np
 import pytest
 
 from praudio.transforms.powerspectrogram import PowerSpectrogram
+from praudio.transforms.transform import TransformType
 from utils import sample_signal
 
 
@@ -13,12 +14,8 @@ def power_spectrogram():
 def test_power_spectrogram_instance_is_instantiated_correctly(
         power_spectrogram):
     assert isinstance(power_spectrogram, PowerSpectrogram)
-    assert power_spectrogram.frame_length == 100
-    assert power_spectrogram.hop_length == 50
-    assert power_spectrogram.win_length == 75
     assert  power_spectrogram.power == 2
-    assert power_spectrogram.window == "hann"
-    assert power_spectrogram.name == "power_spectrogram"
+    assert power_spectrogram.name == TransformType.POWERSPECTROGRAM
 
 
 def test_power_spectrogram_is_extracted(power_spectrogram, sample_signal):
@@ -30,7 +27,7 @@ def test_power_spectrogram_is_extracted(power_spectrogram, sample_signal):
     AND the modified Signal object with the new power spectrogram is returned
     """
     signal = power_spectrogram.process(sample_signal)
-    assert signal.name == "power_spectrogram"
+    assert signal.name == "powerspectrogram_stft_dummy"
     assert type(signal.data) == np.ndarray
     assert len(signal.data.shape) == 2
     assert type(signal.data[0][0]) == np.float_

@@ -2,6 +2,7 @@ import numpy as np
 import pytest
 
 from praudio.transforms.mfcc import MFCC
+from praudio.transforms.transform import TransformType
 from utils import sample_signal
 
 
@@ -17,7 +18,7 @@ def test_mfcc_instance_is_instantiated_correctly(mfcc):
     assert mfcc.hop_length == 50
     assert mfcc.win_length == 75
     assert mfcc.window == "hann"
-    assert mfcc.name == "mfcc"
+    assert mfcc.name == TransformType.MFCC
 
 
 def test_mfcc_is_extracted(mfcc, sample_signal):
@@ -29,7 +30,7 @@ def test_mfcc_is_extracted(mfcc, sample_signal):
     AND the modified Signal object with the new power spectrogram is returned
     """
     signal = mfcc.process(sample_signal)
-    assert signal.name == "mfcc"
+    assert signal.name == "mfcc_dummy"
     assert type(signal.data) == np.ndarray
     assert len(signal.data.shape) == 2
     assert type(signal.data[0][0]) == np.float_

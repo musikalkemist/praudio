@@ -1,6 +1,14 @@
 # CHANGELOG
 This file provides a history of the changes in the repo.
 
+# [0.0.11] - 24.08.21 - Valerio Velardo
+- Using an enumeration class for referring to transforms types instead of
+strings
+- Updated all transforms to use TransformTypes class
+- MagnitudeSpectrogram and PowerSpectrogram have an STFT object, instead of
+inheriting from it
+- Updated unittests to reflect changes
+
 # [0.0.10] - 24.08.21 - Valerio Velardo
 - Implemented batch transformations in TransformsChain
 - Implemented unittests for TransformsChain

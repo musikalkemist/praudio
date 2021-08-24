@@ -2,6 +2,7 @@ import numpy as np
 import pytest
 
 from praudio.transforms.log import Log
+from praudio.transforms.transform import TransformType
 from utils import sample_signal
 from utils import sample_2d_signal
 
@@ -14,6 +15,7 @@ def log():
 def test_loader_instance_is_instantiated_correctly(log):
     assert isinstance(log, Log)
     assert log.boost == .1
+    assert log.name == TransformType.LOG
 
 
 def test_value_error_is_thrown_if_negative_boost_is_passed_in_constructor():

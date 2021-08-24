@@ -2,6 +2,7 @@ import numpy as np
 import pytest
 
 from praudio.transforms.melspectrogram import MelSpectrogram
+from praudio.transforms.transform import TransformType
 from utils import sample_signal
 
 
@@ -19,7 +20,7 @@ def test_mel_spectrogram_instance_is_instantiated_correctly(mel_spectrogram):
     assert mel_spectrogram.hop_length == 50
     assert mel_spectrogram.win_length == 75
     assert mel_spectrogram.window == "hann"
-    assert mel_spectrogram.name == "mel_spectrogram"
+    assert mel_spectrogram.name == TransformType.MELSPECTROGRAM
 
 
 def test_mel_spectrogram_is_extracted(mel_spectrogram, sample_signal):
@@ -31,7 +32,7 @@ def test_mel_spectrogram_is_extracted(mel_spectrogram, sample_signal):
     AND the modified Signal object with the new mel spectrogram is returned
     """
     signal = mel_spectrogram.process(sample_signal)
-    assert signal.name == "mel_spectrogram"
+    assert signal.name == "melspectrogram_dummy"
     assert type(signal.data) == np.ndarray
     assert len(signal.data.shape) == 2
     assert signal.data.shape[0] == 32

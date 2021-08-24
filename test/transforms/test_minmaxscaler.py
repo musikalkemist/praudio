@@ -2,6 +2,7 @@ import numpy as np
 import pytest
 
 from praudio.transforms.scaling.minmaxscaler import MinMaxScaler
+from praudio.transforms.transform import TransformType
 from utils import sample_signal
 
 
@@ -14,6 +15,7 @@ def test_loader_instance_is_instantiated_correctly(min_max_scaler):
     assert isinstance(min_max_scaler, MinMaxScaler)
     assert min_max_scaler.min_val == -1.
     assert min_max_scaler.max_val == 1.
+    assert min_max_scaler.name == TransformType.MINMAXSCALER
 
 
 def test_signal_is_normalised(min_max_scaler, sample_signal):

@@ -7,7 +7,7 @@ import logging
 
 import numpy as np
 
-from praudio.transforms.transform import Transform
+from praudio.transforms.transform import Transform, TransformType
 from praudio.io.signal import Signal
 
 
@@ -23,11 +23,10 @@ class Log(Transform):
 
     def __init__(self,
                  boost: float = 1e-7):
-        super().__init__("log")
-        if boost < 0:
-            raise ValueError(f"log_boost must be > 0. {boost} provided")
+        super().__init__(TransformType.LOG)
+        if boost <= 0:
+            raise ValueError(f"'boost' argument must be > 0. {boost} provided")
         self.boost = boost
-        logger.info("Instantiated Log object")
 
     def process(self, signal: Signal) -> Signal:
         """Apply logarithm to signal.
@@ -36,7 +35,7 @@ class Log(Transform):
 
         :return: Modified signal
         """
+        signal.name = self._prepend_transform_name(signal.name)
         signal.data = np.log(signal.data + self.boost)
-        signal.name = self.name + "_" + signal.name
-        logger.info("Applied logarithm to %s", signal.file)
+        logger.info("Applied %s to %s", self.name.value, signal.file)
         return signal

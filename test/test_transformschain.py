@@ -22,7 +22,7 @@ def test_transforms_chain_is_instantiated_correctly(transforms_chain):
 
 def test_transforms_names_are_returned_correctly(transforms_chain):
     assert transforms_chain.transforms_names == [
-        "magnitude_spectrogram",
+        "magnitudespectrogram",
         "log",
         "minmaxscaler"
     ]
@@ -37,7 +37,8 @@ def test_signal_is_sequentially_processed(transforms_chain, sample_signal):
     AND the modified Signal is returned
     """
     transformed_signal =  transforms_chain.process(sample_signal)
-    assert transformed_signal.name == "minmaxscaler_log_magnitude_spectrogram"
+    assert transformed_signal.name == \
+           "minmaxscaler_log_magnitudespectrogram_stft_dummy"
     assert len(transformed_signal.data.shape) == 2
     assert transformed_signal.data.min() == -2
     assert transformed_signal.data.max() == 2

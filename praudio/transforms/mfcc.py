@@ -4,7 +4,7 @@ import logging
 
 import librosa
 
-from praudio.transforms.transform import Transform
+from praudio.transforms.transform import Transform, TransformType
 from praudio.io.signal import Signal
 
 
@@ -30,13 +30,12 @@ class MFCC(Transform):
                  hop_length: int = 1024,
                  win_length: int = 2048,
                  window: str = "hann"):
-        super().__init__("mfcc")
+        super().__init__(TransformType.MFCC)
         self.num_mfcc = num_mfcc
         self.frame_length = frame_length
         self.hop_length = hop_length
         self.win_length = win_length
         self.window = window
-        logger.info("Instantiated STFT object")
 
     def process(self, signal: Signal) -> Signal:
         """Extract MFCCs and modify signal.
@@ -46,14 +45,12 @@ class MFCC(Transform):
 
         :return: Modified signal
         """
-        mfcc = librosa.feature.mfcc(signal.data,
-                                    sr=signal.sample_rate,
-                                    n_fft=self.frame_length,
-                                    hop_length=self.hop_length,
-                                    win_length=self.win_length,
-                                    window=self.window)
-        signal.data = mfcc
-        signal.name = self.name
-        logger.info("Extracted MFCCs for %s",
-                     signal.file)
+        signal.name = self._prepend_transform_name(signal.name)
+        signal.data = librosa.feature.mfcc(signal.data,
+                                           sr=signal.sample_rate,
+                                           n_fft=self.frame_length,
+                                           hop_length=self.hop_length,
+                                           win_length=self.win_length,
+                                           window=self.window)
+        logger.info("Applied %s to %s", self.name.value, signal.file)
         return signal

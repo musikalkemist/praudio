@@ -3,6 +3,7 @@
 import numpy as np
 
 from praudio.transforms.scaling.scaler import Scaler
+from praudio.transforms.transform import TransformType
 
 
 class Standardiser(Scaler):
@@ -15,7 +16,7 @@ class Standardiser(Scaler):
     """
 
     def __init__(self):
-        super().__init__("standardiser")
+        super().__init__(TransformType.STANDARDISER)
         self._min_std = 1e-7
 
     def _scale(self, array: np.ndarray):

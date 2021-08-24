@@ -2,6 +2,7 @@ import numpy as np
 import pytest
 
 from praudio.transforms.stft import STFT
+from praudio.transforms.transform import TransformType
 from utils import sample_signal
 
 
@@ -16,7 +17,7 @@ def test_stft_instance_is_instantiated_correctly(stft):
     assert stft.hop_length == 50
     assert stft.win_length == 75
     assert stft.window == "hann"
-    assert stft.name == "stft"
+    assert stft.name == TransformType.STFT
 
 
 def test_stft_is_extracted(stft, sample_signal):
@@ -28,7 +29,7 @@ def test_stft_is_extracted(stft, sample_signal):
     AND the modified Signal object with the new STFT is returned
     """
     signal = stft.process(sample_signal)
-    assert signal.name == "stft"
+    assert signal.name == "stft_dummy"
     assert type(signal.data) == np.ndarray
     assert len(signal.data.shape) == 2
     assert type(signal.data[0][0]) == np.complex_

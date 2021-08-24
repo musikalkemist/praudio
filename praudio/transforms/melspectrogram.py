@@ -4,7 +4,7 @@ import logging
 
 import librosa
 
-from praudio.transforms.transform import Transform
+from praudio.transforms.transform import Transform, TransformType
 from praudio.io.signal import Signal
 
 
@@ -38,7 +38,7 @@ class MelSpectrogram(Transform):
                  hop_length: int = 1024,
                  win_length: int = 2048,
                  window: str = "hann"):
-        super().__init__("mel_spectrogram")
+        super().__init__(TransformType.MELSPECTROGRAM)
         self.num_mels = num_mels
         self.min_freq = min_freq
         self.max_freq = max_freq
@@ -46,7 +46,6 @@ class MelSpectrogram(Transform):
         self.hop_length = hop_length
         self.win_length = win_length
         self.window = window
-        logger.info("Instantiated MelSpectrogram object")
 
     def process(self, signal: Signal) -> Signal:
         """Extract Mel Spectrogram and modify signal.
@@ -55,7 +54,8 @@ class MelSpectrogram(Transform):
 
         :return: Modified signal
         """
-        mel_spectrogram = librosa.feature.melspectrogram(
+        signal.name = self._prepend_transform_name(signal.name)
+        signal.data = librosa.feature.melspectrogram(
                             signal.data,
                             sr=signal.sample_rate,
                             n_mels=self.num_mels,
@@ -63,7 +63,5 @@ class MelSpectrogram(Transform):
                             hop_length=self.hop_length,
                             win_length=self.win_length,
                             window=self.window)
-        signal.data = mel_spectrogram
-        signal.name = self.name
-        logger.info("Extracted Mel spectrogram for %s", signal.file)
+        logger.info("Applied %s to %s", self.name.value, signal.file)
         return signal

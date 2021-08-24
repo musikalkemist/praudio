@@ -17,7 +17,8 @@ class TransformsChain:
 
     @property
     def transforms_names(self):
-        transform_names = [transform.name for transform in self.transforms]
+        transform_names = [transform.name.value for transform in
+                           self.transforms]
         return transform_names
 
     def process(self, signal: Signal) -> Signal:

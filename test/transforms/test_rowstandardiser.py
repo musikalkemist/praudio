@@ -2,6 +2,7 @@ import numpy as np
 import pytest
 
 from praudio.transforms.scaling.rowstandardiser import RowStandardiser
+from praudio.transforms.transform import TransformType
 from praudio.errors import NotA2DSignalError
 from utils import sample_2d_signal
 
@@ -13,6 +14,7 @@ def row_standardiser():
 
 def test_loader_instance_is_instantiated_correctly(row_standardiser):
     assert isinstance(row_standardiser, RowStandardiser)
+    assert row_standardiser.name == TransformType.ROWSTANDARDISER
 
 
 def test_signal_is_scaled(row_standardiser, sample_2d_signal):

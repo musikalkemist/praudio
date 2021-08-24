@@ -15,10 +15,6 @@ logger = logging.getLogger(__name__)
 class Scaler(Transform):
     """Scaler is a base class for different types of concrete Scalers."""
 
-    def __init__(self, name):
-        super().__init__(name)
-        logger.info("Instantiated %s object", self.name)
-
     def process(self, signal: Signal) -> Signal:
         """Apply scaling to signal.
 
@@ -26,9 +22,8 @@ class Scaler(Transform):
 
         :return: Modified signal
         """
-        norm_data = self._scale(signal.data)
-        signal.data = norm_data
-        signal.name = self.name + "_" + signal.name
+        signal.name = self._prepend_transform_name(signal.name)
+        signal.data = self._scale(signal.data)
         logger.info("Applied %s on %s", self.name, signal.file)
         return signal
 
