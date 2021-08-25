@@ -8,7 +8,8 @@ from praudio.io.signal import Signal
 from praudio.errors import FileExtensionError
 
 
-DUMMY_AUDIO_FILE = Path(Path(__file__).parent.parent, "dummy").with_suffix(".wav")
+DUMMY_AUDIO_FILE = Path(Path(__file__).parent.parent,
+                        "dummydataset", "dummy").with_suffix(".wav")
 
 
 @pytest.fixture

@@ -8,7 +8,8 @@ from praudio.io.loader import Loader
 from utils_preprocess import file_preprocessor
 
 
-DUMMY_AUDIO_FILE = Path(Path(__file__).parent.parent, "dummy").with_suffix(".wav")
+DUMMY_AUDIO_FILE = Path(Path(__file__).parent.parent,
+                        "dummydataset", "dummy").with_suffix(".wav")
 
 
 def test_file_preprocessor_is_instantiated_correctly(file_preprocessor):
