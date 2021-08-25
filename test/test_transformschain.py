@@ -2,7 +2,7 @@ import pytest
 
 from praudio.transformschain import TransformsChain
 from praudio.transforms import MagnitudeSpectrogram, Log, MinMaxScaler
-from transforms.utils import sample_signal
+from transforms.utils_transforms import sample_signal
 
 magnitude_spectrogram = MagnitudeSpectrogram()
 log = Log()

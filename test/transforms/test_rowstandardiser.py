@@ -4,7 +4,7 @@ import pytest
 from praudio.transforms.scaling.rowstandardiser import RowStandardiser
 from praudio.transforms.transform import TransformType
 from praudio.errors import NotA2DSignalError
-from utils import sample_2d_signal
+from utils_transforms import sample_2d_signal
 
 
 @pytest.fixture

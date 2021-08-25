@@ -3,8 +3,8 @@ import pytest
 
 from praudio.transforms.log import Log
 from praudio.transforms.transform import TransformType
-from utils import sample_signal
-from utils import sample_2d_signal
+from utils_transforms import sample_signal
+from utils_transforms import sample_2d_signal
 
 
 @pytest.fixture
@@ -28,7 +28,7 @@ def test_1dim_signal_is_scaled(log, sample_signal):
     GIVEN a Signal object
     AND a Log object
     WHEN the signal is passed to process
-    THEN the log of the signal is calgulated
+    THEN the log of the signal is calculated
     AND returned as part of the Signal object
     """
     original_signal = sample_signal.data[:]

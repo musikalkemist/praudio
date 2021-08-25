@@ -13,6 +13,7 @@ def saver():
 
 def test_saver_is_instantiated_correctly(saver):
     assert isinstance(saver, NumpySaver)
+    assert saver.extension == "npy"
 
 
 def test_saver_stores_numpy_array(saver):

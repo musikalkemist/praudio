@@ -3,7 +3,7 @@ import pytest
 
 from praudio.transforms.scaling.standardiser import Standardiser
 from praudio.transforms.transform import TransformType
-from utils import sample_signal
+from utils_transforms import sample_signal
 
 
 @pytest.fixture

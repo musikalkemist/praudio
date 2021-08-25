@@ -1,6 +1,15 @@
 # CHANGELOG
 This file provides a history of the changes in the repo.
 
+# [0.0.12] - 25.08.21 - Valerio Velardo
+- Implemented FilePreprocessor
+- Implemented BatchFilePreprocessor
+- Implemented abstract Saver
+- Implemented utility functions to create directory hierarchy with and without
+file in input
+- Implemented relative unittests
+
+
 # [0.0.11] - 24.08.21 - Valerio Velardo
 - Using an enumeration class for referring to transforms types instead of
 strings
