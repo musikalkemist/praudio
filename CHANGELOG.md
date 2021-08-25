@@ -1,6 +1,9 @@
 # CHANGELOG
 This file provides a history of the changes in the repo.
 
+# [0.0.15] - 25.08.21 - Valerio Velardo
+- Implemented TransformationsChainCreator with unittests
+
 # [0.0.14] - 25.08.21 - Valerio Velardo
 - Implemented TransformationFactory with unittests
 

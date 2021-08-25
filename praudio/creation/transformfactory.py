@@ -3,9 +3,14 @@ This module contains TransformFactory, a class that enables to
 instantiate transform objects.
 """
 
+import logging
+
 from praudio.transforms.transform import Transform
 from praudio.transforms import Log, MagnitudeSpectrogram, MelSpectrogram, \
     MinMaxScaler, MFCC, PowerSpectrogram, STFT, RowStandardiser, Standardiser
+
+
+logger = logging.getLogger(__name__)
 
 
 class TransformFactory:
@@ -23,6 +28,7 @@ class TransformFactory:
             "rowstandardiser": RowStandardiser,
             "standardiser": Standardiser,
         }
+        logger.info("Instantiated TrnasformFactory object")
 
     def create(self, transform_type: str, **kwargs) -> Transform:
         """Instantiate and return concrete transform.
