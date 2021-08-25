@@ -4,7 +4,7 @@ from pathlib import Path
 
 import pytest
 
-from praudio.preprocessors.batchpreprocessor import BatchFilePreprocessor
+from praudio.preprocessors.batchfilepreprocessor import BatchFilePreprocessor
 from utils_preprocess import file_preprocessor
 
 

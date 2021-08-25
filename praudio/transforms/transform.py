@@ -19,8 +19,8 @@ class TransformType(Enum):
 
     LOG = "log"
     MAGNITUDESPECTROGRAM = "magnitudespectrogram"
-    MINMAXSCALER = "minmaxscaler"
     MELSPECTROGRAM = "melspectrogram"
+    MINMAXSCALER = "minmaxscaler"
     MFCC = "mfcc"
     POWERSPECTROGRAM = "powerspectrogram"
     STFT = "stft"

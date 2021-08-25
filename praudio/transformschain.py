@@ -9,7 +9,7 @@ from praudio.transforms.transform import Transform
 from praudio.io.signal import Signal
 
 
-class TransformsChain:
+class TransformsChain():
     """Apply multiple transforms on a signal in a sequential manner."""
 
     def __init__(self, transforms: List[Transform]):

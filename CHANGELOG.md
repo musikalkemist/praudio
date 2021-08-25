@@ -1,6 +1,9 @@
 # CHANGELOG
 This file provides a history of the changes in the repo.
 
+# [0.0.14] - 25.08.21 - Valerio Velardo
+- Implemented TransformationFactory with unittests
+
 # [0.0.13] - 25.08.21 - Valerio Velardo
 - Removed dummy.wav file at root of test directory. Using file in dummydataset
 folder instead for tests.
