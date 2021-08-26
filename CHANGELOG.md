@@ -1,6 +1,11 @@
 # CHANGELOG
 This file provides a history of the changes in the repo.
 
+# [0.0.16] - 26.08.21 - Valerio Velardo
+- Implemented FilePreprocessorCreator
+- Implemented BatchFilePreprocessorCreator
+- Implemented relative unittests
+
 # [0.0.15] - 25.08.21 - Valerio Velardo
 - Implemented TransformationsChainCreator with unittests
 
@@ -18,7 +23,6 @@ folder instead for tests.
 - Implemented utility functions to create directory hierarchy with and without
 file in input
 - Implemented relative unittests
-
 
 # [0.0.11] - 24.08.21 - Valerio Velardo
 - Using an enumeration class for referring to transforms types instead of

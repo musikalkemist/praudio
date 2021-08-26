@@ -50,6 +50,8 @@ class TransformsChainCreator:
 
             Check out concrete transforms' documentation to check all the
             available arguments to pass in the configs.
+
+        :return: Instantiated transforms chain
         """
         transforms = self._create_transforms(configs)
         transforms_chain = TransformsChain(transforms)

@@ -4,12 +4,7 @@ from praudio.transformschain import TransformsChain
 from praudio.creation.transformfactory import TransformFactory
 from praudio.creation.transformschaincreator import TransformsChainCreator
 from praudio.transforms import Log, MagnitudeSpectrogram, MinMaxScaler
-
-
-@pytest.fixture
-def transforms_chain_creator():
-    tf = TransformFactory()
-    return TransformsChainCreator(tf)
+from utils_creation import transforms_chain_creator
 
 
 @pytest.fixture
