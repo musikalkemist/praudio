@@ -1,0 +1,14 @@
+dataset_dir: "/home/valerio/datasets/dummypumpdataset"
+save_dir: "/home/valerio/datasets/preprocesseddummydata"
+file_preprocessor:
+  loader:
+    sample_rate: 16000
+    mono: True
+  transforms_chain:
+    magnitudespectrogram:
+      frame_length: 1024
+      hop_length: 512
+      win_length: 1024
+      window: hann
+    log: {}
+    minmaxscaler: {}

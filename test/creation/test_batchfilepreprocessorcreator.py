@@ -1,7 +1,8 @@
 import pytest
 
 
-from praudio.creation.batchfilepreprocessorcreator import BatchFilePreprocessorCreator
+from praudio.creation.batchfilepreprocessorcreator import \
+    BatchFilePreprocessorCreator, create_batch_file_preprocessor_creator
 from praudio.creation.filepreprocessorcreator import FilePreprocessorCreator
 from praudio.preprocessors.batchfilepreprocessor import BatchFilePreprocessor
 from praudio.preprocessors.filepreprocessor import FilePreprocessor
@@ -63,4 +64,14 @@ def test_transforms_chain_is_created_correctly(batch_file_preprocessor_creator,
     assert bfp.dataset_dir == "/path/to/dataset/"
     assert bfp.save_dir == "/dir/where/to/store/preprocessed/dataset/"
 
+
+def test_batch_file_preprocessor_creator_is_created():
+    """
+    GIVEN the function 'create_batch_file_preprocessor_creator'
+    WHEN it is called
+    THEN a BatchFilePreprocessorCreator is created
+    AND it's returned
+    """
+    batch_file_preprocessor_creator = create_batch_file_preprocessor_creator()
+    assert isinstance(batch_file_preprocessor_creator, BatchFilePreprocessorCreator)
 

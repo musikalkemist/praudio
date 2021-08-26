@@ -3,7 +3,7 @@ from pathlib import Path
 
 import pytest
 
-from praudio.config.configloader import ConfigLoader
+from praudio.config.configloader import ConfigLoader, create_config_loader
 from praudio.config.configvalidator import ConfigValidator
 from praudio.utils import create_dir_hierarchy
 from utils_config import configs
@@ -50,3 +50,8 @@ def test_config_loader_throws_file_exists_error_if_dataset_dir_doesnt_eixst(
     """
     with pytest.raises(FileExistsError):
         loaded_configs = config_loader.load(DUMMY_CONFIG_FILE)
+
+
+def test_config_loader_is_created():
+    conf_loader = create_config_loader()
+    assert isinstance(conf_loader, ConfigLoader)

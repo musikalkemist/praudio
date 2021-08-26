@@ -7,6 +7,9 @@ import logging
 
 from praudio.preprocessors.batchfilepreprocessor import BatchFilePreprocessor
 from praudio.creation.filepreprocessorcreator import FilePreprocessorCreator
+from praudio.creation.transformschaincreator import TransformsChainCreator
+from praudio.creation.transformfactory import TransformFactory
+
 
 
 logger = logging.getLogger(__name__)
@@ -64,3 +67,14 @@ class BatchFilePreprocessorCreator:
                                                         configs["save_dir"])
 
         return batch_file_preprocessor
+
+
+def create_batch_file_preprocessor_creator() -> BatchFilePreprocessorCreator:
+    """Instantiate a new BatchFilePreprocessorCreator object.
+
+    :return: New batch file preprocessor creator
+    """
+    transform_factory = TransformFactory()
+    transforms_chain_creator = TransformsChainCreator(transform_factory)
+    file_preprocessor_creator = FilePreprocessorCreator(transforms_chain_creator)
+    return BatchFilePreprocessorCreator(file_preprocessor_creator)

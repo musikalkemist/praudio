@@ -29,3 +29,12 @@ class ConfigLoader:
 
     def _validate(self, configurations: dict):
         self.validator.validate(configurations)
+
+
+def create_config_loader() -> ConfigLoader:
+    """Instantiate a config validator object
+
+    :return: New config loader
+    """
+    config_validator = ConfigValidator()
+    return ConfigLoader(config_validator)

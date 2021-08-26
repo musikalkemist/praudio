@@ -34,5 +34,10 @@ setuptools.setup(
             "pylint",
             "mypy"
         ]
+    },
+    entry_points={
+        "console_scripts": [
+            "preprocess = praudio.preprocess:preprocess",
+        ]
     }
 )

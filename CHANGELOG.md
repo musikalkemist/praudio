@@ -1,6 +1,12 @@
 # CHANGELOG
 This file provides a history of the changes in the repo.
 
+# [0.0.19] - 26.08.21 - Valerio Velardo
+- Implemented preprocess endpoint
+- Implemented creation function for ConfigLoader
+- Implemented creation function for BatchFilePreprocessorCreator
+- Implemented unittests
+
 # [0.0.18] - 26.08.21 - Valerio Velardo
 - Fixed bug in test_configvalidator. Now we remove the temporary dir hierarchy
 at the end of unittest
