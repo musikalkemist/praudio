@@ -14,7 +14,6 @@ def configs():
     configs = {
         "loader": {
             "sample_rate": 44100,
-            "mono": True
         },
         "transforms_chain": {
             "magnitudespectrogram": {
@@ -51,7 +50,6 @@ def test_transforms_chain_is_created_correctly(file_preprocessor_creator,
     file_preprocessor = file_preprocessor_creator.create(configs)
     assert isinstance(file_preprocessor, FilePreprocessor)
     assert file_preprocessor.loader.sample_rate == 44100
-    assert file_preprocessor.loader.mono == True
     assert file_preprocessor.transforms_chain.transforms_names == [
         "magnitudespectrogram", "log", "minmaxscaler"]
     assert isinstance(file_preprocessor.saver, NumpySaver)

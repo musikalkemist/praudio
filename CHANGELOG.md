@@ -1,6 +1,10 @@
 # CHANGELOG
 This file provides a history of the changes in the repo.
 
+# [0.0.17] - 26.08.21 - Valerio Velardo
+- Implemented configuration loading and validation
+- Implemented unittests for ConfigLoader and ConfigValidator
+
 # [0.0.16] - 26.08.21 - Valerio Velardo
 - Implemented FilePreprocessorCreator
 - Implemented BatchFilePreprocessorCreator

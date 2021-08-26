@@ -64,8 +64,7 @@ class FilePreprocessorCreator:
 
         :return: Instantiated file preprocessor
         """
-        loader = Loader(configs["loader"]["sample_rate"],
-                        configs["loader"]["mono"])
+        loader = Loader(**configs["loader"])
         transforms_chain = self.transforms_chain_creator.create(configs["transforms_chain"])
         saver = NumpySaver()
         file_preprocessor = FilePreprocessor(loader, transforms_chain, saver)
