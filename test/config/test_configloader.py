@@ -35,7 +35,7 @@ def test_config_is_loaded(config_loader, configs):
     # otherwise the validator would thrown an error
     create_dir_hierarchy("path/to/dataset/")
     loaded_configs = config_loader.load(DUMMY_CONFIG_FILE)
-    shutil.rmtree("path/to/dataset/")
+    shutil.rmtree("path")
     assert loaded_configs == configs
 
 

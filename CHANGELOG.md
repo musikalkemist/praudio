@@ -1,6 +1,10 @@
 # CHANGELOG
 This file provides a history of the changes in the repo.
 
+# [0.0.18] - 26.08.21 - Valerio Velardo
+- Fixed bug in test_configvalidator. Now we remove the temporary dir hierarchy
+at the end of unittest
+
 # [0.0.17] - 26.08.21 - Valerio Velardo
 - Implemented configuration loading and validation
 - Implemented unittests for ConfigLoader and ConfigValidator
