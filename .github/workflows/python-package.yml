@@ -24,6 +24,8 @@ jobs:
         sudo apt-get install libsndfile1
     - name: Run checklist - linter, type checker, testing
       run: make checklist
+    - name: Check github ref
+      run: echo ${{ github.ref }}
 
   build-n-deploy:
     runs-on: ubuntu-latest
