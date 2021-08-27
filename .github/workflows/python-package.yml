@@ -27,7 +27,7 @@ jobs:
 
   build-n-deploy:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+    if: ${{ github.ref == 'refs/tags/publish' }}
     needs: test
     steps:
       - uses: actions/checkout@v2
