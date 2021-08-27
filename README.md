@@ -10,32 +10,53 @@ for example, while training a model.
 
 The library uses `librosa` as an audio processing backend.
 
+
 ### How do I install the library? ###
-To install the package type in the terminal:
+
+You can install *praudio* both with `pip` via PyPi, and by cloning the 
+*praudio* repo from GitHub. 
+
+For both approaches, it's advisable to use a dedicated Python virtual 
+environment.
+
+#### Installing from PyPi ####
+
+Installing from PyPi is the easiest option. In the terminal type:
 
 ```shell
-pip install .
+$ pip install praudio
 ```
 
-You can also use a rule in Makefile:
+#### Installing from GitHub ####
+
+First, you should clone the repository from GitHub:
+
 ```shell
-make install 
+$ git clone git@github.com:musikalkemist/praudio.git
+```
+
+Then, move to the project root and, to install the package, type in the terminal:
+```shell
+$ pip install .
+```
+
+You can also use a rule in the available Makefile (see below):
+```shell
+$ make install 
 ```
 
 To install the package in development mode use:
-
 ```shell
 $ pip install -e .[testing]
 ```
 
 You can also use a rule in Makefile:
-
 ```shell
-make install_dev 
+$ make install_dev 
 ```
 
 This will install all the packages necessary to run the tests, lint, 
-typehint. It will also install the package in 'editable' mode, which is 
+type checker. It will also install the package in 'editable' mode, which is 
 ideal for development.
 
 ### Python version ###
@@ -104,7 +125,6 @@ The project uses `pylint`. The linter helps enforcing a coding
 standard, sniffs for code smells and offers simple refactoring suggestions.
 
 To run the linter type:
-
 ```shell
 $ make lint
 ```
@@ -115,7 +135,6 @@ Python. You can add type hints (PEP 484) to your Python programs,
 and use mypy to type check them statically. 
 
 To run the type checker type:
-
 ```shell
 $ make typehint
 ```
@@ -126,7 +145,6 @@ The project uses `pytest` for unittests. Tests can be run in one go using
 unittests.
 
 To run all the unittests type:
-
 ```shell
 $ make test
 ```
@@ -141,7 +159,6 @@ $ make checklist
 
 #### Clean ####
 Use the clean rule to get rid of `pyc` files and `__pychache__`:
-
 ```shell
 $ make clean
 ```
