@@ -1,6 +1,9 @@
 # CHANGELOG
 This file provides a history of the changes in the repo.
 
+# [0.1.1] - 27.08.21 - Valerio Velardo
+- Re-introduced deployment to TestPyPi in GitHub workflow
+
 # [0.1.0] - 27.08.21 - Valerio Velardo
 - Implemented deployment to PyPi in GitHub workflow
 - Outlined how to install praudio via GitHub and PyPi in README
