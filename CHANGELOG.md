@@ -1,6 +1,9 @@
 # CHANGELOG
 This file provides a history of the changes in the repo.
 
+# [0.0.21] - 27.08.21 - Valerio Velardo
+- Compiled README file
+
 # [0.0.20] - 27.08.21 - Valerio Velardo
 - Implemented ConfigSaver with unittests
 - Storing configurations in preprocess entry point

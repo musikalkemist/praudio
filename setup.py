@@ -13,7 +13,7 @@ setuptools.setup(
     version=version.__version__,
     author="Valerio Velardo",
     author_email="velardovalerio@gmail.com",
-    description="Audio preprocessing framework for ML applications",
+    description="Complex preprocessing of entire audio datasets with 1 command",
     url="https://github.com/musikalkemist/praudio",
     packages=setuptools.find_packages(),
     classifiers=[
