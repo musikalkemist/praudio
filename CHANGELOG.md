@@ -1,6 +1,9 @@
 # CHANGELOG
 This file provides a history of the changes in the repo.
 
+# [0.0.26] - 27.08.21 - Valerio Velardo
+- Implemented deployment to TestPyPi conditional to tagging
+
 # [0.0.25] - 27.08.21 - Valerio Velardo
 - Implemented build-n-deploy job in Github actions to build distribution and
 upload it on Test PyPi
