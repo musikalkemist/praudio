@@ -1,6 +1,12 @@
 # CHANGELOG
 This file provides a history of the changes in the repo.
 
+# [0.0.25] - 27.08.21 - Valerio Velardo
+- Implemented build-n-deploy job in Github actions to build distribution and
+upload it on Test PyPi
+- Added README.md as long_description in setup.py
+- Fixed numpy to version 1.20.3 in requirements.txt
+
 # [0.0.21] - 27.08.21 - Valerio Velardo
 - Compiled README file
 

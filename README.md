@@ -57,8 +57,7 @@ $ preprocess /path/to/config.yml
 In the config.yml, you should provide the following parameters:
 - `dataset_dir`: Path to the directory where your audio dataset is stored
 - `save_dir`: Path where to save the preprocessed audio.
-- Under `file_preprocessor`, you should provide settings for `loader` and 
-  `transforms_chain`.
+- Under `file_preprocessor`, you should provide settings for `loader` and `transforms_chain`.
 - `loader`: Provide settings for the loader.
 - `transforms_chain`: Parameters for each transform in the sequence. 
   of transforms which are applied to your data (i.e., TransformChain).

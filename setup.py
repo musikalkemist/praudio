@@ -8,12 +8,17 @@ version = SourceFileLoader("praudio.version",
 with open("requirements.txt", "r") as fp:
     required = fp.read().splitlines()
 
+with open("README.md", "r", encoding='utf-8') as f:
+    long_description = f.read()
+
 setuptools.setup(
     name="praudio",
     version=version.__version__,
     author="Valerio Velardo",
     author_email="velardovalerio@gmail.com",
     description="Complex preprocessing of entire audio datasets with 1 command",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
     url="https://github.com/musikalkemist/praudio",
     packages=setuptools.find_packages(),
     classifiers=[
