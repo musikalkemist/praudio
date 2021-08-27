@@ -39,7 +39,7 @@ typehint. It will also install the package in 'editable' mode, which is
 ideal for development.
 
 ### Python version ###
-*praudio* works in Python 3 only.
+*praudio* works in Python 3.6, 3.7, 3.8.
 
 
 ### How do I preprocess an audio dataset? ###

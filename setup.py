@@ -19,6 +19,8 @@ setuptools.setup(
     classifiers=[
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9"
     ],
     project_urls={
         "Source": "https://github.com/musikalkemist/praudio",
@@ -28,11 +30,11 @@ setuptools.setup(
     install_requires=required,
     extras_require={
         "testing": [
-            "pytest",
-            "coverage",
-            "pytest-mock",
-            "pylint",
-            "mypy"
+            "pytest==6.2.4",
+            "coverage==5.5",
+            "pytest-mock==3.6.1",
+            "pylint==2.10.1",
+            "mypy==0.4.3"
         ]
     },
     entry_points={
