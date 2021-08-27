@@ -26,5 +26,4 @@ jobs:
         sudo apt-get install libsndfile1
     - name: Test with pytest
       run: |
-        coverage run --source ./praudio -m pytest --verbose
-        coverage report -m
+        make checklist
