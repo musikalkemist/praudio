@@ -9,10 +9,11 @@ $ preprocess /path/to/config.yml
 """
 
 import argparse
+from pathlib import Path
 
 from praudio.config.configloader import create_config_loader
+from praudio.config.configsaver import ConfigSaver
 from praudio.creation.batchfilepreprocessorcreator import create_batch_file_preprocessor_creator
-from praudio.preprocessors.batchfilepreprocessor import BatchFilePreprocessor
 
 
 def _parse_config_file() -> str:
@@ -24,18 +25,26 @@ def _parse_config_file() -> str:
     return args.config_file
 
 
-def _init_batch_file_preprocessor(config_file: str) -> BatchFilePreprocessor:
+def _init_batch_file_preprocessor(config_file: str):
     config_loader = create_config_loader()
     batch_file_preprocessor_creator = create_batch_file_preprocessor_creator()
     configs = config_loader.load(config_file)
     batch_file_preprocessor = batch_file_preprocessor_creator.create(configs)
-    return batch_file_preprocessor
+    return batch_file_preprocessor, configs
+
+
+def _save_configs(configs: dict):
+    config_saver = ConfigSaver()
+    save_path = str(Path(configs["save_dir"], "configs").with_suffix(".yml"))
+    config_saver.save(save_path, configs)
 
 
 def preprocess():
     config_file = _parse_config_file()
-    batch_file_preprocessor = _init_batch_file_preprocessor(config_file)
+    batch_file_preprocessor, configs = _init_batch_file_preprocessor(config_file)
     batch_file_preprocessor.preprocess()
+    _save_configs(configs)
+
 
 
 if __name__ == "__main__":

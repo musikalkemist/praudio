@@ -1,6 +1,10 @@
 # CHANGELOG
 This file provides a history of the changes in the repo.
 
+# [0.0.20] - 27.08.21 - Valerio Velardo
+- Implemented ConfigSaver with unittests
+- Storing configurations in preprocess entry point
+
 # [0.0.19] - 26.08.21 - Valerio Velardo
 - Implemented preprocess endpoint
 - Implemented creation function for ConfigLoader
